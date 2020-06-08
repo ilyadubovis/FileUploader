@@ -32,7 +32,7 @@ namespace FileUploader.Controllers
             try
             {
                 var filePath = Path.Combine(_fileFolder, fileChunk.Chunk.FileName);
-                // if this is the 1st chunk -> delete exsting file
+                // if this is the 1st chunk -> delete existing file
                 if (fileChunk.Index == 0 && System.IO.File.Exists(filePath))
                     System.IO.File.Delete(filePath);
                 var buffer = new byte[fileChunk.Chunk.Length];
