@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+  
+  <script type="text/javascript" src="fileupload.js"></script>
+</head>
+
+<body ng-app="FileUploadModule" ng-cloak>
+    <div ng-controller="FileUploadCtrl" ng-cloak ng-app="MyApp" ng-init="init()">
+      <md-content layout-padding>
+        <div>
+            <directive-select-file></directive-select-file>
+        <div>  
+        <div>
+          <directive-upload-file></directive-upload-file>
+        </div>
+        {{progress}}
+        <span ng-show="errorMessage" style="color:red">{{errorMessage}}</span>
+      </md-content>
+    </div>
+</body>
+</html>
+
